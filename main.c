@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:06 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/09/27 21:04:31 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/03 17:20:11 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static int			ft_realloc(int fd, t_points **tab_p)
 		split = ft_strsplit(line, ' ');
 		while (split[i])
 			i++;
-		j = j + i;
+		j += i;
 		free(line);
 	}
 	if (!(*tab_p = (t_points*)malloc(sizeof(t_points) * (j + 1))))
@@ -105,7 +105,7 @@ int					main(int ac, char **av)
 		readline(line, &tab_p, &e);
 	if (e.xmax == 0 || e.nb / e.xmax != e.ymax || fd < 0)
 	{
-		ft_putstr("error\n");
+		ft_putstr("error map\n");
 		return (0);
 	}
 	close(fd);

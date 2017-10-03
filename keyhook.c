@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:03 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/09/27 21:11:57 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/03 17:25:42 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int		keyhooks_2(int keycode, t_env *e)
 
 int				keyhooks(int keycode, t_env *e)
 {
-	printf("%d\n", keycode);//		To remove 
+	printf("KEY: %d\n", keycode);//		To remove 
 	if (keycode == 45)
 	{
 		if (e->zneg == 1)

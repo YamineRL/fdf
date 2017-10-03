@@ -6,14 +6,14 @@
 #    By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/27 11:17:27 by yhaddar           #+#    #+#              #
-#    Updated: 2017/10/03 16:43:02 by yhaddar          ###   ########.fr        #
+#    Updated: 2017/10/03 18:27:06 by yhaddar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =		fdf
 CC =		@gcc
-CFLAGS =	-Wall -Wextra -Werror -fsanitize=address
-MLX =	-framework OpenGL -framework Appkit
+CFLAGS =	-Wall -Wextra -Werror
+MLX =	-lmlx -framework OpenGL -framework Appkit
 
 SRCS =		main.c \
 			errors.c \
@@ -32,19 +32,19 @@ LIBFT_PATH = ./libft
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-	make -C $(LIBFT_PATH)
-	#make -C $(MLX_PATH)
-	$(CC) $(CFLAG) $(SRCS) -L$(MLX_PATH) -lmlx -framework OpenGL -framework AppKit -L./libft -lft -o $(NAME) -g
+	@make -C $(LIBFT_PATH)
+	@make -C $(MLX_PATH)
+	$(CC) $(CFLAG) $(SRCS) -L$(MLX_PATH) $(MLX) -L./libft -lft -o $(NAME)
 	@echo "fdf built"
 
 clean:
 	@rm -f $(OBJS)
 	@make -C $(LIBFT_PATH) clean
-	#@make -C $(MLX_PATH) clean
+	@make -C $(MLX_PATH) clean
 
 fclean:	clean
-	rm -f $(NAME)
-	make -C $(LIBFT_PATH) fclean
+	@rm -f $(NAME)
+	@make -C $(LIBFT_PATH) fclean
 
 re:	fclean all
 
