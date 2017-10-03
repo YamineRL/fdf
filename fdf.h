@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:57 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/09/27 14:35:38 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/03 16:29:15 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <stdio.h>
 
 # define BUFF_SIZE 1500
-# define WIN_X 2000
+# define WIN_X 1400
 # define WIN_Y 1400
 # define ABS(Value) (Value < 0 ? -Value : Value)
 

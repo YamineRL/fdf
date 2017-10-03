@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:45 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/09/27 21:09:53 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/09/28 13:33:08 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		char_error(char c)
 {
 	if (c < '0' || c > '9')
 	{
-		ft_putstr("error bis\n");
+		ft_putstr("map values incompatible\n");
 		exit(0);
 	}
 	return (1);
