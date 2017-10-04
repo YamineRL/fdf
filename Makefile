@@ -6,14 +6,14 @@
 #    By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/27 11:17:27 by yhaddar           #+#    #+#              #
-#    Updated: 2017/10/03 18:27:06 by yhaddar          ###   ########.fr        #
+#    Updated: 2017/10/04 19:53:11 by yhaddar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =		fdf
 CC =		@gcc
 CFLAGS =	-Wall -Wextra -Werror
-MLX =	-lmlx -framework OpenGL -framework Appkit
+MLX =		-lmlx -framework OpenGL -framework Appkit
 
 SRCS =		main.c \
 			errors.c \
@@ -26,8 +26,8 @@ SRCS =		main.c \
 
 OBJS =		$(SRCS:.c=.o)
 
-MLX_PATH = ./mlx
-LIBFT_PATH = ./libft
+MLX_PATH =	./mlx
+LIBFT_PATH =./libft
 
 all:	$(NAME)
 

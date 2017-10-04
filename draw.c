@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:41 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/09/27 21:09:57 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/04 19:49:35 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,16 +83,6 @@ static void			join_point(t_env *e, t_points *p1, t_points *p2)
 	nb++;
 }
 
-static void			before_draw_bis(t_points *tab_p, t_env *e, int i)
-{
-	join_point(e, &tab_p[i], &tab_p[i + 1]);
-	join_point(e, &tab_p[i], &tab_p[i + e->xmax]);
-	if (tab_p[i].zz == tab_p[i + e->xmax + 1].zz)
-		join_point(e, &tab_p[i], &tab_p[i + e->xmax + 1]);
-	if (tab_p[i].xx > e->xmin && tab_p[i].zz == tab_p[i + e->xmax - 1].zz)
-		join_point(e, &tab_p[i], &tab_p[i + e->xmax - 1]);
-}
-
 void				before_draw(t_points *tab_p, t_env *e)
 {
 	int			i;
@@ -108,11 +98,12 @@ void				before_draw(t_points *tab_p, t_env *e)
 		else if (tab_p[i].xx == (e->xmax - 1) && tab_p[i].yy != (e->ymax - 1))
 		{
 			join_point(e, &tab_p[i], &tab_p[i + e->xmax]);
-			if (tab_p[i].zz == tab_p[i + e->xmax - 1].zz)
-				join_point(e, &tab_p[i], &tab_p[i + e->xmax - 1]);
 		}
 		else if (tab_p[i].xx != (e->xmax - 1) && tab_p[i].yy != (e->ymax - 1))
-			before_draw_bis(tab_p, e, i);
+		{
+			join_point(e, &tab_p[i], &tab_p[i + 1]);
+			join_point(e, &tab_p[i], &tab_p[i + e->xmax]);
+		}
 		line.x = tab_p[i].newx;
 		line.y = tab_p[i].newy;
 		i++;

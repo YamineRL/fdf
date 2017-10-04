@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:06 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/03 17:20:11 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/04 19:52:12 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void			initmax(t_env *e)
 	e->winy = 100;
 	e->iso = 1;
 	e->alpha = 10;
-	e->zoom = 50;
+	e->zoom = 20;
 	e->zmin = 0;
 	e->zmax = 0;
 	e->pivo = 1;
@@ -71,7 +71,6 @@ t_points			*readline(char *line, t_points **tab_p, t_env *e)
 	{
 		(*tab_p)[p].xx = i;
 		(*tab_p)[p].yy = y;
-		char_error(*linesplit[i]);
 		if (((*tab_p)[p].zz = ft_atoi(linesplit[i])) <= e->zmin)
 			e->zmin = (*tab_p)[p].zz;
 		if (((*tab_p)[p].zz = ft_atoi(linesplit[i])) >= e->zmax)
