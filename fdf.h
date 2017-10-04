@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:57 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/03 17:30:07 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/04 20:13:54 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ typedef struct	s_points
 	float		newx;
 	float		newy;
 	int			xx;
-	int			xo;
 	int			yy;
-	int			yo;
 	int			zz;
 }				t_points;
 
@@ -51,6 +49,13 @@ typedef struct	s_line
 
 typedef struct	s_env
 {
+	float		divpi;
+	int			is_decr;
+	int			winx;
+	int			winy;
+	int			alpha;
+	float		pivo;
+	int			zneg;
 	void		*mlx;
 	void		*win;
 	int			xmax;
@@ -66,13 +71,6 @@ typedef struct	s_env
 	int			iso;
 	float		c1;
 	float		c2;
-	float		divpi;
-	int			is_decr;
-	int			winx;
-	int			winy;
-	int			alpha;
-	float		pivo;
-	int			zneg;
 	t_points	*tab_p;
 }				t_env;
 
