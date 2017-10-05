@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:28 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/04 20:31:16 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:58:49 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 static unsigned int	ft_get_color_suite(int cp1, int cp2, int i, int delta)
 {

@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/18 14:21:22 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/05/30 20:55:29 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:58:18 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 #include <stdio.h>
 
 int		buffer_to_stock(int fd, char **stock, int *bytes_read)

@@ -6,35 +6,37 @@
 #    By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/27 11:17:27 by yhaddar           #+#    #+#              #
-#    Updated: 2017/10/04 19:53:11 by yhaddar          ###   ########.fr        #
+#    Updated: 2017/10/05 17:01:23 by yhaddar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =		fdf
 CC =		@gcc
 CFLAGS =	-Wall -Wextra -Werror
-MLX =		-lmlx -framework OpenGL -framework Appkit
+MLX =		-lmlx -framework OpenGL -framework Appkit -L$(MLX_PATH)
 
-SRCS =		main.c \
-			errors.c \
-			display.c \
-			draw.c \
-			keyhook.c \
-			bonus_colors.c \
-			new_points.c \
-			get_next_line.c \
+SRCS =		./src/main.c \
+			./src/errors.c \
+			./src/display.c \
+			./src/draw.c \
+			./src/keyhook.c \
+			./src/bonus_colors.c \
+			./src/new_points.c \
+			./src/get_next_line.c \
 
 OBJS =		$(SRCS:.c=.o)
 
+INCL = ./include
 MLX_PATH =	./mlx
 LIBFT_PATH =./libft
+LIBFT = -L./libft -lft
 
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
 	@make -C $(LIBFT_PATH)
 	@make -C $(MLX_PATH)
-	$(CC) $(CFLAG) $(SRCS) -L$(MLX_PATH) $(MLX) -L./libft -lft -o $(NAME)
+	$(CC) $(CFLAG) $(SRCS) $(MLX) $(LIBFT) -I$(INCL) -o $(NAME)
 	@echo "fdf built"
 
 clean:

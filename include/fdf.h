@@ -6,18 +6,18 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:57 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/05 01:59:01 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 17:00:42 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
 
-# include "libft/libft.h"
+# include "../libft/libft.h"
 # include <math.h>
 # include <fcntl.h>
 # include <unistd.h>
-# include "mlx/mlx.h"
+# include "../mlx/mlx.h"
 # include <stdlib.h>
 # include <stdio.h>
 

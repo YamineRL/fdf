@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:06 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/05 02:43:32 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:58:57 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 static void			initmax(t_env *e)
 {

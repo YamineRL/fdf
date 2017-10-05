@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:45 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/05 02:02:58 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:58:07 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 int				error(int ac)
 {

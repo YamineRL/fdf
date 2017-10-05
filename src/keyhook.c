@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:03 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/04 20:33:50 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:58:55 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 static int		keyhooks_2(int keycode, t_env *e)
 {

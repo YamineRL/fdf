@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:09 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/09/27 21:09:45 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:58:40 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 void		relief(t_points *tab_p, t_env *e)
 {

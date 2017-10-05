@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:37 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/04 20:21:25 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:57:43 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 static void		window_center(t_env *e)
 {

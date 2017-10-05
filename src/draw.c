@@ -6,11 +6,11 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:41 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/04 19:49:35 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 16:58:52 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 static void			draw_line_x(t_line *line, t_env *e)
 {
