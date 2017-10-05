@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:06 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/05 02:01:08 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 02:43:32 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,8 +113,6 @@ int					main(int ac, char **av)
 			check_file(&e) != 1)
 	{
 		ft_putstr("error map\n");
-		printf("fd: %d\nnb coor: %d\nlenx: %d\n",
-				e.fd, e.nb, e.xmax);
 		return (0);
 	}
 	ft_display(tab_p, &e);
