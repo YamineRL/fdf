@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:57 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/04 20:13:54 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 01:59:01 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ typedef struct	s_env
 	int			iso;
 	float		c1;
 	float		c2;
+	char		*file;
+	int			fd;
 	t_points	*tab_p;
 }				t_env;
 
@@ -83,7 +85,8 @@ void			ft_display(t_points *tab_p, t_env *e);
 int				get_next_line(int const fd, char **line);
 int				main(int ac, char **av);
 void			before_draw(t_points *tab_p, t_env *e);
-int				char_error(char c);
 int				error(int ac);
+int				valid_map(int fd, int *tot, int size_l, char **map);
+int				check_file(t_env *e);
 
 #endif

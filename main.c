@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:06 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/04 20:11:37 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/05 02:01:08 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static void			initmax(t_env *e)
 	e->zmax = 0;
 	e->pivo = 1;
 	e->zneg = 1;
+	e->file = ft_strnew(0);
 }
 
 static int			ft_realloc(int fd, t_points **tab_p)
@@ -86,29 +87,37 @@ t_points			*readline(char *line, t_points **tab_p, t_env *e)
 	return (*tab_p);
 }
 
+void				ft_exit(int fd, t_points *tab_p)
+{
+	close(fd);
+	free(tab_p);
+	ft_putstr("And Thanks for all the fish");
+}
+
 int					main(int ac, char **av)
 {
-	int			fd;
 	char		*line;
 	t_points	*tab_p;
-	size_t		j;
+	int			j;
 	t_env		e;
 
 	j = 0;
 	initmax(&e);
 	error(ac);
-	fd = open(av[1], O_RDONLY);
-	j = ft_realloc(fd, &tab_p);
-	fd = open(av[1], O_RDONLY);
-	while (get_next_line(fd, &line) == 1)
+	e.fd = open(av[1], O_RDONLY);
+	j = ft_realloc(e.fd, &tab_p);
+	e.fd = open(av[1], O_RDONLY);
+	while (get_next_line(e.fd, &line) == 1)
 		readline(line, &tab_p, &e);
-	if (e.xmax == 0 || e.nb / e.xmax != e.ymax || fd < 0)
+	if (e.xmax == 0 || e.nb / e.xmax != e.ymax || e.fd < 0 ||
+			check_file(&e) != 1)
 	{
 		ft_putstr("error map\n");
+		printf("fd: %d\nnb coor: %d\nlenx: %d\n",
+				e.fd, e.nb, e.xmax);
 		return (0);
 	}
-	close(fd);
 	ft_display(tab_p, &e);
-	free(tab_p);
+	ft_exit(e.fd, tab_p);
 	return (1);
 }

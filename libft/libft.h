@@ -6,7 +6,7 @@
 /*   By: yhaddar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/31 14:45:37 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/09/27 11:32:12 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/04 23:02:58 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_tablen(char **tab);
 
 #endif

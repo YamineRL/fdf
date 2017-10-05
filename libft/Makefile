@@ -6,7 +6,7 @@
 #    By: yhaddar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/31 12:55:05 by yhaddar           #+#    #+#              #
-#    Updated: 2017/09/27 12:35:19 by yhaddar          ###   ########.fr        #
+#    Updated: 2017/10/04 23:35:12 by yhaddar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_memchr.o \
 	ft_itoa.o ft_putchar.o ft_putstr.o ft_putendl.o ft_putnbr.o \
 	ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 	ft_isspace.o ft_memccpy.o ft_strcpy.o ft_lstadd.o ft_lstdel.o \
-	ft_lstdelone.o ft_lstiter.o ft_lstmap.o ft_lstnew.o
+	ft_lstdelone.o ft_lstiter.o ft_lstmap.o ft_lstnew.o ft_tablen.o
 
 CC = @gcc -c -Wall -Werror -Wextra
 
