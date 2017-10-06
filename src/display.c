@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:39:37 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/05 16:57:43 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/06 22:26:34 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void			display_comments(t_env *e)
 	mlx_string_put(e->mlx, e->win, 10, 120, 0xFFFFFF,
 		"Zoom             = + / -");
 	mlx_string_put(e->mlx, e->win, 10, 60, 0xFFFFFF,
-		"Alter  z : + / - = z / a");
+		"Alter  z : + / - = Page up / Page down");
+
 	mlx_string_put(e->mlx, e->win, 10, 15, 0xFFFFFF,
 		"Switch view      = i");
 	mlx_string_put(e->mlx, e->win, 10, 75, 0xFFFFFF,
@@ -44,6 +45,6 @@ void			ft_display(t_points *tab_p, t_env *e)
 	window_center(e);
 	before_draw(tab_p, e);
 	e->tab_p = tab_p;
-	mlx_key_hook(e->win, keyhooks, e);
+	mlx_hook(e->win, 2, 3, keyhooks, e);
 	mlx_loop(e->mlx);
 }

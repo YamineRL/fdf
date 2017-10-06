@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 12:40:03 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/05 16:58:55 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/06 22:30:04 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int		keyhooks_2(int keycode, t_env *e)
 {
 	if ((e->zoom > 5 && keycode == 78) || keycode == 69)
-		e->zoom = keycode == 78 ? e->zoom - 5 : e->zoom + 10;
+		e->zoom = keycode == 78 ? e->zoom - 2 : e->zoom + 2;
 	if (keycode == 53)
 		exit(0);
 	if (keycode == 34)
@@ -44,14 +44,14 @@ int				keyhooks(int keycode, t_env *e)
 			e->zneg = 1;
 	}
 	if (keycode == 123 || keycode == 124)
-		e->winx = keycode == 124 ? e->winx - 100 : e->winx + 100;
+		e->winx = keycode == 124 ? e->winx - 50 : e->winx + 50;
 	if (keycode == 125 || keycode == 126)
-		e->winy = keycode == 125 ? e->winy - 100 : e->winy + 100;
+		e->winy = keycode == 125 ? e->winy - 50 : e->winy + 50;
 	if (keycode == 85 || keycode == 88)
 		e->pivo = keycode == 85 ? e->pivo + 0.1 : e->pivo - 0.1;
 	if (keycode == 84 || keycode == 83)
 	{
-		e->divpi = keycode == 84 ? e->divpi + M_PI / 15 : e->divpi - M_PI / 15;
+		e->divpi = keycode == 84 ? e->divpi + M_PI / 21 : e->divpi - M_PI / 21;
 		e->c1 = (float)sin(e->divpi);
 		e->c2 = (float)cos(e->divpi);
 	}
